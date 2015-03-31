@@ -27,9 +27,6 @@ class TodoView
     @todo.on(:destroy) { destroy }
   end
 
-  def render
-  end
-
   def title_elem
   end
 
@@ -45,5 +42,8 @@ class TodoView
     value = input.value.strip
     element.remove_class 'editing'
     value.empty? ? clear : @todo.update(title: value)
+  end
+
+  def render
   end
 end

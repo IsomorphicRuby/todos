@@ -1,3 +1,7 @@
+require_relative '../../lib/local_model'
+require_relative '../../lib/rethinkdb_model'
+require 'virtus'
+
 class Todo
   include RethinkModel unless defined?('$$')
   include LocalModel   if defined?('$$')
